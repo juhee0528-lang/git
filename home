@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <style>
+      :root {
+        --bg: #0f172a;
+        --panel: #111827;
+        --text: #e5e7eb;
+        --muted: #9ca3af;
+        --accent: #60a5fa;
+        --accent-2: #818cf8;
+        --border: rgba(255,255,255,0.12);
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: linear-gradient(135deg, var(--bg), #1e293b);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      .page {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 48px 20px 64px;
+      }
+
+      .card {
+        background: rgba(17, 24, 39, 0.86);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        box-shadow: 0 20px 45px rgba(0,0,0,0.25);
+        backdrop-filter: blur(10px);
+        padding: 32px;
+      }
+
+      .hero {
+        display: grid;
+        gap: 24px;
+        margin-bottom: 24px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin: 0 0 8px;
+      }
+
+      .hero .intro {
+        font-size: 1.05rem;
+        color: var(--muted);
+        margin: 0;
+        max-width: 700px;
+      }
+
+      .section {
+        margin-top: 24px;
+      }
+
+      .section-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 12px;
+        color: #f8fafc;
+      }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .chip {
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, rgba(96,165,250,0.2), rgba(129,140,248,0.2));
+        border: 1px solid rgba(96,165,250,0.25);
+        color: #dbeafe;
+        font-size: 0.95rem;
+      }
+
+      .projects {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .project-card {
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 18px;
+        background: rgba(255,255,255,0.03);
+      }
+
+      .project-card h3 {
+        margin: 0 0 8px;
+      }
+
+      .project-card p {
+        color: var(--muted);
+        margin: 0 0 12px;
+      }
+
+      .link-btn {
+        display: inline-block;
+        text-decoration: none;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 10px;
+        background: linear-gradient(90deg, var(--accent), var(--accent-2));
+        font-size: 0.95rem;
+      }
+
+      .contact-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .contact-item {
+        padding: 10px 14px;
+        border-radius: 12px;
+        background: rgba(255,255,255,0.04);
+        border: 1px solid var(--border);
+      }
+
+      .contact-item a {
+        color: #dbeafe;
+        text-decoration: none;
+      }
+
+      @media (max-width: 700px) {
+        .card { padding: 24px; }
+        .projects { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="card">
+        <div class="hero">
+          <h1>이주희</h1>
+          <p class="intro">안녕하세요. KDT 13기 이주희입니다.</p>
+        </div>
+
+        <div class="section">
+          <div class="section-title">관심사</div>
+          <div class="chips">
+            <span class="chip">빅데이터</span>
+            <span class="chip">AI</span>
+            <span class="chip">데이터 분석</span>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">프로젝트</div>
+          <div class="projects">
+            <article class="project-card">
+              <h3>시각화 웹 개발 프로젝트</h3>
+              <p>데이터를 보기 쉽게 시각화하고 웹에서 전달하는 프로젝트입니다.</p>
+              <a class="link-btn" href="#">바로가기</a>
+            </article>
+            <article class="project-card">
+              <h3>통계 데이터 사이언스 프로젝트</h3>
+              <p>통계 분석과 인사이트 도출에 초점을 둔 프로젝트입니다.</p>
+              <a class="link-btn" href="#">바로가기</a>
+            </article>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">스킬</div>
+          <div class="chips">
+            <span class="chip">Python</span>
+            <span class="chip">R</span>
+            <span class="chip">Colab</span>
+            <span class="chip">SQL</span>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">연락처</div>
+          <div class="contact-list">
+            <div class="contact-item"><a href="mailto:dlwngml6329@naver.com">이메일: dlwngml6329@naver.com</a></div>
+            <div class="contact-item"><a href="https://github.com/juhee0528-lang" target="_blank" rel="noreferrer">GitHub: github.com/juhee0528-lang</a></div>
+            <div class="contact-item">연락처: 010-0000-0000</div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
